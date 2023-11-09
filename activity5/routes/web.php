@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 
@@ -14,9 +15,8 @@ use App\Http\Controllers\DashboardController;
 |
 */
 
-Route::get('/', function () {
-    return view('login');
-});
+Route::get('/', [AuthController::class, 'showLogin'])->name('showLogin');
+Route::any('/login', [AuthController::class, 'login'])->name('login');
 
 Route::get('/dashboard', [DashboardController::class, 'goToDashboard'])->name('goTo.Dashboard');
 Route::get('/register', [DashboardController::class, 'goToRegister'])->name('goTo.Register');
