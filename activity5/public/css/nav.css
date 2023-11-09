@@ -27,6 +27,8 @@ nav {
     align-items: center;
     background-color: var(--bg-color);
     color: white;
+    transition: background-color .5s ease;
+    user-select: none;
 }
 
 nav ul {
@@ -55,7 +57,7 @@ nav ul li::before {
 }
 
 nav ul li:hover::before {
-    width: 80%;
+    width: 70%;
 }
 
 a {
@@ -63,4 +65,9 @@ a {
     color: inherit;
     height: 100%;
     width: 100%;
+}
+
+.nav-light {
+    background-color: white;
+    color: black;
 }
