@@ -14,7 +14,7 @@
     <div class="container">
         <div class="form-container">
             <h3>Register Here</h3>
-            <form method="GET" action="{{route('goTo.Dashboard')}}">
+            <form method="GET" action="{{route('dashboard.index')}}">
                 <div class="form-group">
                   <label for="exampleInputEmail1">Complete Name</label>
                   <input type="text" class="form-control" id="exampleInputEmail1" autocomplete="off" aria-describedby="emailHelp">

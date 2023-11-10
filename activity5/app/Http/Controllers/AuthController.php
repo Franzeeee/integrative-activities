@@ -22,7 +22,7 @@ class AuthController extends Controller
         ]);
 
 
-        return redirect()->route('goTo.Dashboard');
+        return redirect()->route('dashboard.index');
     }
     public function showLogin()
     {
