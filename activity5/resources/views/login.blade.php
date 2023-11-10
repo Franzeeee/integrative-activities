@@ -23,7 +23,7 @@
 
                 <div class="form-group">
                   <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control @error('email') error-border @enderror" name="email" id="exampleInputEmail1" autocomplete="off" aria-describedby="emailHelp">
+                  <input type="email" value="{{old('email')}}" class="form-control @error('email') error-border @enderror" name="email" id="exampleInputEmail1" autocomplete="off" aria-describedby="emailHelp">
                   @error('email')
                   <div class="input-error">
                     <p>{{ $message }}</p>
