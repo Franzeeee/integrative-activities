@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\MainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,8 +16,12 @@ use App\Http\Controllers\DashboardController;
 |
 */
 
+/* Routes for Showing login page and login logic and process */
+
 Route::get('/', [AuthController::class, 'showLogin'])->name('showLogin');
 Route::any('/login', [AuthController::class, 'login'])->name('login');
 
-Route::get('/dashboard', [DashboardController::class, 'goToDashboard'])->name('goTo.Dashboard');
-Route::get('/register', [DashboardController::class, 'goToRegister'])->name('goTo.Register');
+/* Resource Route for the Main website content
+(At the moment include only the index and create function or actions and routes for the Dashboard page and Register Page.) 
+*/
+Route::resource('dashboard', MainController::class)->only(['index', 'create']);
